@@ -1,0 +1,161 @@
+{
+  "identity": {
+    "persona": "E1",
+    "philosophy": "Soft Minimalism with Organic Warmth. Anti-generic SaaS.",
+    "principles": [
+      "Fusion: SaaS precision meets botanical warmth.",
+      "Emotion: Calm, trustworthy, efficient.",
+      "Content: Data is beautiful, but whitespace is king.",
+      "Contrast: Dark charcoal sidebar vs. warm beige content."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Manrope, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "weights": {
+      "headings": "600",
+      "body_regular": "400",
+      "body_medium": "500"
+    },
+    "sizes": {
+      "h1": "text-4xl md:text-5xl tracking-tight",
+      "h2": "text-3xl tracking-tight",
+      "h3": "text-2xl tracking-tight",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm leading-normal"
+    },
+    "instructions": "Import Manrope from Google Fonts. Use Manrope for all Headings (h1-h3). Use Inter for body text and data tables."
+  },
+  "colors": {
+    "palette": {
+      "sidebar": {
+        "bg": "#0F1115",
+        "fg": "#E5E5E5",
+        "border": "#27272A",
+        "hover": "#1F2125",
+        "active": "#D4A373"
+      },
+      "main": {
+        "bg": "#F9F9F7",
+        "fg": "#1F2937"
+      },
+      "card": {
+        "bg": "#FFFFFF",
+        "fg": "#1F2937",
+        "border": "#E5E7EB"
+      },
+      "primary": {
+        "default": "#D4A373",
+        "foreground": "#FFFFFF",
+        "hover": "#C29365"
+      },
+      "status": {
+        "pending": {
+          "bg": "#FEF3C7",
+          "text": "#92400E"
+        },
+        "in_progress": {
+          "bg": "#DBEAFE",
+          "text": "#1E40AF"
+        },
+        "resolved": {
+          "bg": "#DCFCE7",
+          "text": "#166534"
+        },
+        "high_priority": {
+          "bg": "#FEE2E2",
+          "text": "#991B1B"
+        }
+      }
+    },
+    "tailwind_config_extension": {
+      "colors": {
+        "sidebar": "#0F1115",
+        "sidebar-foreground": "#E5E5E5",
+        "sidebar-border": "#27272A",
+        "sidebar-hover": "#1F2125",
+        "warm-bg": "#F9F9F7",
+        "gold": {
+          "DEFAULT": "#D4A373",
+          "hover": "#C29365"
+        }
+      }
+    }
+  },
+  "layout": {
+    "structure": "Sidebar Layout (Fixed Left) + Scrollable Main Content",
+    "spacing": {
+      "container_padding": "p-6 md:p-10",
+      "card_padding": "p-6",
+      "gap": "gap-6"
+    },
+    "radius": {
+      "card": "rounded-xl",
+      "button": "rounded-lg",
+      "input": "rounded-md"
+    },
+    "shadows": {
+      "card": "shadow-[0_2px_8px_rgba(0,0,0,0.04)]",
+      "hover": "shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-gold hover:bg-gold-hover text-white font-medium px-6 py-2.5 transition-all duration-200 shadow-sm hover:shadow-md active:scale-95",
+      "secondary": "bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+    },
+    "cards": {
+      "base": "bg-white border border-gray-100/50 shadow-card hover:shadow-hover transition-all duration-300"
+    },
+    "inputs": {
+      "base": "bg-white border-gray-200 focus:border-gold focus:ring-gold/20 transition-all duration-200"
+    },
+    "status_badge": "px-2.5 py-0.5 rounded-full text-xs font-medium uppercase tracking-wide"
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-md bg-white/70 border border-white/20",
+    "gradients": "None. Use solid colors and subtle shadows.",
+    "textures": "Subtle noise overlay on the sidebar (optional) to add depth."
+  },
+  "image_urls": {
+    "login_sidebar": {
+      "url": "https://images.unsplash.com/photo-1687530449872-5393d814f8de?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Modern minimalist bench against brick wall - use for Login Page side panel",
+      "category": "login_hero"
+    },
+    "dashboard_banner": {
+      "url": "https://images.unsplash.com/photo-1768508293815-3b18713d2d96?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Modern university walkway - use for Student Dashboard Welcome Banner",
+      "category": "dashboard_hero"
+    },
+    "empty_state": {
+      "url": "https://images.unsplash.com/photo-1765603939080-b469e0e814f5?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Minimalist building with scooter - use for 'No Complaints' empty state",
+      "category": "empty_state"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add Manrope to index.html or import in CSS.",
+    "2. CONFIGURE TAILWIND: Update tailwind.config.js with the 'colors' extension provided above.",
+    "3. CSS VARIABLES: Update index.css :root variables to match the 'warm-bg' (#F9F9F7) and 'sidebar' (#0F1115) theme.",
+    "4. SIDEBAR: Create a Sidebar component that is fixed width (e.g., w-64) on desktop, hidden on mobile (hamburger menu). Use the Dark Charcoal theme.",
+    "5. DASHBOARD LAYOUT: The main content area must use the Warm Beige background (#F9F9F7).",
+    "6. CARDS: All dashboard widgets (stats, charts, tables) must be white cards with rounded-xl and soft shadow.",
+    "7. CHARTS: Use Recharts or Shadcn Charts. Customize colors to be soft pastels (Blue, Green, Yellow, Red) to match the 'Soft Minimalism' vibe. NO NEON.",
+    "8. FORMS: Use Shadcn Form components but style them with the 'inputs.base' styles defined above.",
+    "9. LOGIN PAGE: Split screen. Left side: Login Form (Warm Beige). Right side: Image (login_sidebar URL) with a dark overlay.",
+    "10. DATA-TESTID: Ensure every interactive element has a data-testid attribute."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid generic 'AI slop' designs. No default blue buttons.",
+    "Use 2-3x more spacing than typical. Whitespace = Luxury.",
+    "Micro-interactions: Add hover states to everything clickable.",
+    "No 'Inter' for Headings. Use Manrope.",
+    "Dark colors look good when used independently without gradients.",
+    "Do not center align the app container.",
+    "Use 'sonner' for toasts."
+  ]
+}
